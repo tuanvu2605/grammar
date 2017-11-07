@@ -14,12 +14,36 @@
 		CC03181D1FA711A4002AB87D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC03181B1FA711A4002AB87D /* LaunchScreen.storyboard */; };
 		CC0318261FA71221002AB87D /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0318241FA71221002AB87D /* TitleCell.swift */; };
 		CC0318271FA71221002AB87D /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0318251FA71221002AB87D /* TitleCell.xib */; };
+		CC17F7A11FB15DA9003A679D /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F79F1FB15DA9003A679D /* ContentCell.swift */; };
+		CC17F7A21FB15DA9003A679D /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC17F7A01FB15DA9003A679D /* ContentCell.xib */; };
+		CC17F7A51FB15E8A003A679D /* LessonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7A31FB15E8A003A679D /* LessonsController.swift */; };
+		CC17F7A61FB15E8A003A679D /* LessonsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC17F7A41FB15E8A003A679D /* LessonsController.xib */; };
+		CC17F7A91FB16372003A679D /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7A71FB16372003A679D /* QuestionCell.swift */; };
+		CC17F7AA1FB16372003A679D /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC17F7A81FB16372003A679D /* QuestionCell.xib */; };
+		CC17F7AD1FB16CCF003A679D /* QuestionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7AB1FB16CCF003A679D /* QuestionsController.swift */; };
+		CC17F7AE1FB16CCF003A679D /* QuestionsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC17F7AC1FB16CCF003A679D /* QuestionsController.xib */; };
+		CC17F7B31FB17A97003A679D /* Grammar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7B21FB17A97003A679D /* Grammar.swift */; };
+		CC17F7B51FB17BE1003A679D /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7B41FB17BE1003A679D /* Lesson.swift */; };
+		CC17F7B71FB17CAD003A679D /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7B61FB17CAD003A679D /* Question.swift */; };
+		CC17F7B91FB17E69003A679D /* QuestionDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7B81FB17E69003A679D /* QuestionDAO.swift */; };
+		CC17F7BB1FB17FF6003A679D /* LessonDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7BA1FB17FF6003A679D /* LessonDAO.swift */; };
+		CC17F7BD1FB196BF003A679D /* DAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7BC1FB196BF003A679D /* DAOFactory.swift */; };
+		CC17F7BF1FB1978E003A679D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7BE1FB1978E003A679D /* AppModel.swift */; };
+		CC17F7C11FB19CCA003A679D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CC17F7C01FB19CCA003A679D /* libsqlite3.tbd */; };
+		CC17F7C31FB1A189003A679D /* gm.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CC17F7C21FB1A189003A679D /* gm.sqlite */; };
+		CC17F7C51FB1A5E7003A679D /* GrammarDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7C41FB1A5E7003A679D /* GrammarDAO.swift */; };
+		CC17F7C81FB1ADDA003A679D /* GrammarsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7C61FB1ADDA003A679D /* GrammarsController.swift */; };
+		CC17F7C91FB1ADDA003A679D /* GrammarsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC17F7C71FB1ADDA003A679D /* GrammarsController.xib */; };
 		CCDFB4CE1FB069990031195C /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFB4CC1FB069990031195C /* HomeController.swift */; };
 		CCDFB4CF1FB069990031195C /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFB4CD1FB069990031195C /* HomeController.xib */; };
 		CCDFB4D31FB072170031195C /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFB4D11FB072170031195C /* BaseTableViewController.swift */; };
 		CCDFB4D41FB072170031195C /* BaseTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFB4D21FB072170031195C /* BaseTableViewController.xib */; };
 		CCDFB4D71FB073120031195C /* ListLessonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFB4D51FB073120031195C /* ListLessonController.swift */; };
 		CCDFB4D81FB073120031195C /* ListLessonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFB4D61FB073120031195C /* ListLessonController.xib */; };
+		CCDFB4DD1FB14F9B0031195C /* CheckBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFB4DB1FB14F9B0031195C /* CheckBoxCell.swift */; };
+		CCDFB4DE1FB14F9B0031195C /* CheckBoxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFB4DC1FB14F9B0031195C /* CheckBoxCell.xib */; };
+		CCDFB4E31FB152850031195C /* LessonTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFB4E11FB152850031195C /* LessonTestController.swift */; };
+		CCDFB4E41FB152850031195C /* LessonTestController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFB4E21FB152850031195C /* LessonTestController.xib */; };
 		EA09E55974CFCB951FEABCC5 /* Pods_Grammar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB75BB4DB5B30805F18DBED6 /* Pods_Grammar.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,12 +59,36 @@
 		CC03181E1FA711A4002AB87D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC0318241FA71221002AB87D /* TitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		CC0318251FA71221002AB87D /* TitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
+		CC17F79F1FB15DA9003A679D /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
+		CC17F7A01FB15DA9003A679D /* ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
+		CC17F7A31FB15E8A003A679D /* LessonsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsController.swift; sourceTree = "<group>"; };
+		CC17F7A41FB15E8A003A679D /* LessonsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonsController.xib; sourceTree = "<group>"; };
+		CC17F7A71FB16372003A679D /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
+		CC17F7A81FB16372003A679D /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
+		CC17F7AB1FB16CCF003A679D /* QuestionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsController.swift; sourceTree = "<group>"; };
+		CC17F7AC1FB16CCF003A679D /* QuestionsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionsController.xib; sourceTree = "<group>"; };
+		CC17F7B21FB17A97003A679D /* Grammar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grammar.swift; sourceTree = "<group>"; };
+		CC17F7B41FB17BE1003A679D /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
+		CC17F7B61FB17CAD003A679D /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		CC17F7B81FB17E69003A679D /* QuestionDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDAO.swift; sourceTree = "<group>"; };
+		CC17F7BA1FB17FF6003A679D /* LessonDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDAO.swift; sourceTree = "<group>"; };
+		CC17F7BC1FB196BF003A679D /* DAOFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOFactory.swift; sourceTree = "<group>"; };
+		CC17F7BE1FB1978E003A679D /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		CC17F7C01FB19CCA003A679D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		CC17F7C21FB1A189003A679D /* gm.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = gm.sqlite; sourceTree = "<group>"; };
+		CC17F7C41FB1A5E7003A679D /* GrammarDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarDAO.swift; sourceTree = "<group>"; };
+		CC17F7C61FB1ADDA003A679D /* GrammarsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarsController.swift; sourceTree = "<group>"; };
+		CC17F7C71FB1ADDA003A679D /* GrammarsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrammarsController.xib; sourceTree = "<group>"; };
 		CCDFB4CC1FB069990031195C /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		CCDFB4CD1FB069990031195C /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
 		CCDFB4D11FB072170031195C /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		CCDFB4D21FB072170031195C /* BaseTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseTableViewController.xib; sourceTree = "<group>"; };
 		CCDFB4D51FB073120031195C /* ListLessonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListLessonController.swift; sourceTree = "<group>"; };
 		CCDFB4D61FB073120031195C /* ListLessonController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListLessonController.xib; sourceTree = "<group>"; };
+		CCDFB4DB1FB14F9B0031195C /* CheckBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxCell.swift; sourceTree = "<group>"; };
+		CCDFB4DC1FB14F9B0031195C /* CheckBoxCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxCell.xib; sourceTree = "<group>"; };
+		CCDFB4E11FB152850031195C /* LessonTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTestController.swift; sourceTree = "<group>"; };
+		CCDFB4E21FB152850031195C /* LessonTestController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonTestController.xib; sourceTree = "<group>"; };
 		EB75BB4DB5B30805F18DBED6 /* Pods_Grammar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grammar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -49,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC17F7C11FB19CCA003A679D /* libsqlite3.tbd in Frameworks */,
 				EA09E55974CFCB951FEABCC5 /* Pods_Grammar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -59,6 +108,7 @@
 		30E198A495EB335174869C86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CC17F7C01FB19CCA003A679D /* libsqlite3.tbd */,
 				EB75BB4DB5B30805F18DBED6 /* Pods_Grammar.framework */,
 			);
 			name = Frameworks;
@@ -94,18 +144,41 @@
 		CC0318111FA711A4002AB87D /* Grammar */ = {
 			isa = PBXGroup;
 			children = (
+				CC17F7AF1FB17709003A679D /* DB */,
 				CCDFB4D91FB079480031195C /* Helper */,
 				CC0318121FA711A4002AB87D /* AppDelegate.swift */,
 				CC0318141FA711A4002AB87D /* ViewController.swift */,
 				CCDFB4D01FB0699E0031195C /* Home */,
 				CC0318241FA71221002AB87D /* TitleCell.swift */,
 				CC0318251FA71221002AB87D /* TitleCell.xib */,
+				CCDFB4DB1FB14F9B0031195C /* CheckBoxCell.swift */,
+				CCDFB4DC1FB14F9B0031195C /* CheckBoxCell.xib */,
+				CC17F79F1FB15DA9003A679D /* ContentCell.swift */,
+				CC17F7A01FB15DA9003A679D /* ContentCell.xib */,
+				CC17F7A71FB16372003A679D /* QuestionCell.swift */,
+				CC17F7A81FB16372003A679D /* QuestionCell.xib */,
 				CC0318161FA711A4002AB87D /* Main.storyboard */,
 				CC0318191FA711A4002AB87D /* Assets.xcassets */,
 				CC03181B1FA711A4002AB87D /* LaunchScreen.storyboard */,
 				CC03181E1FA711A4002AB87D /* Info.plist */,
 			);
 			path = Grammar;
+			sourceTree = "<group>";
+		};
+		CC17F7AF1FB17709003A679D /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				CC17F7C21FB1A189003A679D /* gm.sqlite */,
+				CC17F7B21FB17A97003A679D /* Grammar.swift */,
+				CC17F7B41FB17BE1003A679D /* Lesson.swift */,
+				CC17F7B61FB17CAD003A679D /* Question.swift */,
+				CC17F7B81FB17E69003A679D /* QuestionDAO.swift */,
+				CC17F7BA1FB17FF6003A679D /* LessonDAO.swift */,
+				CC17F7C41FB1A5E7003A679D /* GrammarDAO.swift */,
+				CC17F7BC1FB196BF003A679D /* DAOFactory.swift */,
+				CC17F7BE1FB1978E003A679D /* AppModel.swift */,
+			);
+			path = DB;
 			sourceTree = "<group>";
 		};
 		CCDFB4D01FB0699E0031195C /* Home */ = {
@@ -117,6 +190,14 @@
 				CCDFB4D21FB072170031195C /* BaseTableViewController.xib */,
 				CCDFB4D51FB073120031195C /* ListLessonController.swift */,
 				CCDFB4D61FB073120031195C /* ListLessonController.xib */,
+				CCDFB4E11FB152850031195C /* LessonTestController.swift */,
+				CCDFB4E21FB152850031195C /* LessonTestController.xib */,
+				CC17F7A31FB15E8A003A679D /* LessonsController.swift */,
+				CC17F7A41FB15E8A003A679D /* LessonsController.xib */,
+				CC17F7AB1FB16CCF003A679D /* QuestionsController.swift */,
+				CC17F7AC1FB16CCF003A679D /* QuestionsController.xib */,
+				CC17F7C61FB1ADDA003A679D /* GrammarsController.swift */,
+				CC17F7C71FB1ADDA003A679D /* GrammarsController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -191,13 +272,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCDFB4DE1FB14F9B0031195C /* CheckBoxCell.xib in Resources */,
+				CC17F7AA1FB16372003A679D /* QuestionCell.xib in Resources */,
+				CC17F7A21FB15DA9003A679D /* ContentCell.xib in Resources */,
+				CC17F7AE1FB16CCF003A679D /* QuestionsController.xib in Resources */,
+				CC17F7A61FB15E8A003A679D /* LessonsController.xib in Resources */,
+				CCDFB4E41FB152850031195C /* LessonTestController.xib in Resources */,
 				CC0318271FA71221002AB87D /* TitleCell.xib in Resources */,
 				CC03181D1FA711A4002AB87D /* LaunchScreen.storyboard in Resources */,
 				CCDFB4D41FB072170031195C /* BaseTableViewController.xib in Resources */,
+				CC17F7C91FB1ADDA003A679D /* GrammarsController.xib in Resources */,
 				CC03181A1FA711A4002AB87D /* Assets.xcassets in Resources */,
 				CCDFB4CF1FB069990031195C /* HomeController.xib in Resources */,
 				CC0318181FA711A4002AB87D /* Main.storyboard in Resources */,
 				CCDFB4D81FB073120031195C /* ListLessonController.xib in Resources */,
+				CC17F7C31FB1A189003A679D /* gm.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,10 +345,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC17F7B71FB17CAD003A679D /* Question.swift in Sources */,
+				CCDFB4DD1FB14F9B0031195C /* CheckBoxCell.swift in Sources */,
 				CCDFB4CE1FB069990031195C /* HomeController.swift in Sources */,
 				CC0318261FA71221002AB87D /* TitleCell.swift in Sources */,
+				CC17F7A11FB15DA9003A679D /* ContentCell.swift in Sources */,
+				CC17F7BB1FB17FF6003A679D /* LessonDAO.swift in Sources */,
+				CCDFB4E31FB152850031195C /* LessonTestController.swift in Sources */,
+				CC17F7B51FB17BE1003A679D /* Lesson.swift in Sources */,
 				CCDFB4D31FB072170031195C /* BaseTableViewController.swift in Sources */,
+				CC17F7B91FB17E69003A679D /* QuestionDAO.swift in Sources */,
 				CCDFB4D71FB073120031195C /* ListLessonController.swift in Sources */,
+				CC17F7BF1FB1978E003A679D /* AppModel.swift in Sources */,
+				CC17F7AD1FB16CCF003A679D /* QuestionsController.swift in Sources */,
+				CC17F7B31FB17A97003A679D /* Grammar.swift in Sources */,
+				CC17F7C51FB1A5E7003A679D /* GrammarDAO.swift in Sources */,
+				CC17F7BD1FB196BF003A679D /* DAOFactory.swift in Sources */,
+				CC17F7A91FB16372003A679D /* QuestionCell.swift in Sources */,
+				CC17F7C81FB1ADDA003A679D /* GrammarsController.swift in Sources */,
+				CC17F7A51FB15E8A003A679D /* LessonsController.swift in Sources */,
 				CC0318151FA711A4002AB87D /* ViewController.swift in Sources */,
 				CC0318131FA711A4002AB87D /* AppDelegate.swift in Sources */,
 			);

@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let naviHome = UINavigationController(rootViewController:home )
         self.window?.rootViewController = naviHome
         self.window?.makeKeyAndVisible()
+        AppModel.shareModel.run();
         return true
     }
 

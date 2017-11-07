@@ -20,11 +20,6 @@ class BaseTableViewController: UIViewController {
         
 
     }
-
-
-    
-
-
 }
 
 extension BaseTableViewController : UITableViewDelegate , UITableViewDataSource

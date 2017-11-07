@@ -15,11 +15,11 @@
             <rect key="frame" x="0.0" y="0.0" width="471" height="52"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="471" height="52"/>
+                <rect key="frame" x="0.0" y="0.0" width="471" height="51.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGv-VV-cd5">
-                        <rect key="frame" x="10" y="0.0" width="451" height="51.5"/>
+                        <rect key="frame" x="5" y="0.0" width="461" height="51.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RF-au-Kec">
                                 <rect key="frame" x="10" y="15" width="43.5" height="21"/>
@@ -37,9 +37,9 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="BGv-VV-cd5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8b6-5T-SYr"/>
-                    <constraint firstAttribute="trailing" secondItem="BGv-VV-cd5" secondAttribute="trailing" constant="10" id="PSd-M7-hyr"/>
+                    <constraint firstAttribute="trailing" secondItem="BGv-VV-cd5" secondAttribute="trailing" constant="5" id="PSd-M7-hyr"/>
                     <constraint firstAttribute="bottom" secondItem="BGv-VV-cd5" secondAttribute="bottom" id="tnr-Mw-7SD"/>
-                    <constraint firstItem="BGv-VV-cd5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="uUn-G5-79r"/>
+                    <constraint firstItem="BGv-VV-cd5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="uUn-G5-79r"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
