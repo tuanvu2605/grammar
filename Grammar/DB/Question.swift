@@ -18,6 +18,7 @@ class Question: NSObject {
     var answer_2 = String()
     var answer_3 = String()
     var answer_4 = String()
+    var listAnswers = [String]()
     var correct_answer : Int!
     var status : Int!
     
@@ -31,6 +32,7 @@ class Question: NSObject {
         self.answer_2 = answer2;
         self.answer_3 = answer3;
         self.answer_4 = answer4;
+        listAnswers = [self.answer_1 , self.answer_2,self.answer_3,self.answer_4]
         self.correct_answer = correctAnswer;
         self.status = status;
     }

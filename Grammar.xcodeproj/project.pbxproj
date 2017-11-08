@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC02412F1FB2ECCA0094FEFF /* HIRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02412E1FB2ECCA0094FEFF /* HIRadioButton.swift */; };
+		CC0241321FB2FCAB0094FEFF /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0241301FB2FCAB0094FEFF /* ResultController.swift */; };
+		CC0241331FB2FCAB0094FEFF /* ResultController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0241311FB2FCAB0094FEFF /* ResultController.xib */; };
 		CC0318131FA711A4002AB87D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0318121FA711A4002AB87D /* AppDelegate.swift */; };
 		CC0318151FA711A4002AB87D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0318141FA711A4002AB87D /* ViewController.swift */; };
 		CC0318181FA711A4002AB87D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0318161FA711A4002AB87D /* Main.storyboard */; };
@@ -16,8 +19,6 @@
 		CC0318271FA71221002AB87D /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0318251FA71221002AB87D /* TitleCell.xib */; };
 		CC17F7A11FB15DA9003A679D /* ContentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F79F1FB15DA9003A679D /* ContentCell.swift */; };
 		CC17F7A21FB15DA9003A679D /* ContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC17F7A01FB15DA9003A679D /* ContentCell.xib */; };
-		CC17F7A51FB15E8A003A679D /* LessonsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7A31FB15E8A003A679D /* LessonsController.swift */; };
-		CC17F7A61FB15E8A003A679D /* LessonsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC17F7A41FB15E8A003A679D /* LessonsController.xib */; };
 		CC17F7A91FB16372003A679D /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7A71FB16372003A679D /* QuestionCell.swift */; };
 		CC17F7AA1FB16372003A679D /* QuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC17F7A81FB16372003A679D /* QuestionCell.xib */; };
 		CC17F7AD1FB16CCF003A679D /* QuestionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7AB1FB16CCF003A679D /* QuestionsController.swift */; };
@@ -50,6 +51,9 @@
 /* Begin PBXFileReference section */
 		A4C868F8EDFA9A740CD8E67F /* Pods-Grammar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grammar/Pods-Grammar.debug.xcconfig"; sourceTree = "<group>"; };
 		C9FB9E3C2B2692534F733FC1 /* Pods-Grammar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grammar/Pods-Grammar.release.xcconfig"; sourceTree = "<group>"; };
+		CC02412E1FB2ECCA0094FEFF /* HIRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIRadioButton.swift; sourceTree = "<group>"; };
+		CC0241301FB2FCAB0094FEFF /* ResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultController.swift; sourceTree = "<group>"; };
+		CC0241311FB2FCAB0094FEFF /* ResultController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultController.xib; sourceTree = "<group>"; };
 		CC03180F1FA711A4002AB87D /* Grammar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Grammar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0318121FA711A4002AB87D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC0318141FA711A4002AB87D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,8 +65,6 @@
 		CC0318251FA71221002AB87D /* TitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 		CC17F79F1FB15DA9003A679D /* ContentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentCell.swift; sourceTree = "<group>"; };
 		CC17F7A01FB15DA9003A679D /* ContentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentCell.xib; sourceTree = "<group>"; };
-		CC17F7A31FB15E8A003A679D /* LessonsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsController.swift; sourceTree = "<group>"; };
-		CC17F7A41FB15E8A003A679D /* LessonsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonsController.xib; sourceTree = "<group>"; };
 		CC17F7A71FB16372003A679D /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		CC17F7A81FB16372003A679D /* QuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionCell.xib; sourceTree = "<group>"; };
 		CC17F7AB1FB16CCF003A679D /* QuestionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsController.swift; sourceTree = "<group>"; };
@@ -192,12 +194,12 @@
 				CCDFB4D61FB073120031195C /* ListLessonController.xib */,
 				CCDFB4E11FB152850031195C /* LessonTestController.swift */,
 				CCDFB4E21FB152850031195C /* LessonTestController.xib */,
-				CC17F7A31FB15E8A003A679D /* LessonsController.swift */,
-				CC17F7A41FB15E8A003A679D /* LessonsController.xib */,
 				CC17F7AB1FB16CCF003A679D /* QuestionsController.swift */,
 				CC17F7AC1FB16CCF003A679D /* QuestionsController.xib */,
 				CC17F7C61FB1ADDA003A679D /* GrammarsController.swift */,
 				CC17F7C71FB1ADDA003A679D /* GrammarsController.xib */,
+				CC0241301FB2FCAB0094FEFF /* ResultController.swift */,
+				CC0241311FB2FCAB0094FEFF /* ResultController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -205,6 +207,7 @@
 		CCDFB4D91FB079480031195C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				CC02412E1FB2ECCA0094FEFF /* HIRadioButton.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -276,7 +279,6 @@
 				CC17F7AA1FB16372003A679D /* QuestionCell.xib in Resources */,
 				CC17F7A21FB15DA9003A679D /* ContentCell.xib in Resources */,
 				CC17F7AE1FB16CCF003A679D /* QuestionsController.xib in Resources */,
-				CC17F7A61FB15E8A003A679D /* LessonsController.xib in Resources */,
 				CCDFB4E41FB152850031195C /* LessonTestController.xib in Resources */,
 				CC0318271FA71221002AB87D /* TitleCell.xib in Resources */,
 				CC03181D1FA711A4002AB87D /* LaunchScreen.storyboard in Resources */,
@@ -284,6 +286,7 @@
 				CC17F7C91FB1ADDA003A679D /* GrammarsController.xib in Resources */,
 				CC03181A1FA711A4002AB87D /* Assets.xcassets in Resources */,
 				CCDFB4CF1FB069990031195C /* HomeController.xib in Resources */,
+				CC0241331FB2FCAB0094FEFF /* ResultController.xib in Resources */,
 				CC0318181FA711A4002AB87D /* Main.storyboard in Resources */,
 				CCDFB4D81FB073120031195C /* ListLessonController.xib in Resources */,
 				CC17F7C31FB1A189003A679D /* gm.sqlite in Resources */,
@@ -346,8 +349,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC17F7B71FB17CAD003A679D /* Question.swift in Sources */,
+				CC02412F1FB2ECCA0094FEFF /* HIRadioButton.swift in Sources */,
 				CCDFB4DD1FB14F9B0031195C /* CheckBoxCell.swift in Sources */,
 				CCDFB4CE1FB069990031195C /* HomeController.swift in Sources */,
+				CC0241321FB2FCAB0094FEFF /* ResultController.swift in Sources */,
 				CC0318261FA71221002AB87D /* TitleCell.swift in Sources */,
 				CC17F7A11FB15DA9003A679D /* ContentCell.swift in Sources */,
 				CC17F7BB1FB17FF6003A679D /* LessonDAO.swift in Sources */,
@@ -363,7 +368,6 @@
 				CC17F7BD1FB196BF003A679D /* DAOFactory.swift in Sources */,
 				CC17F7A91FB16372003A679D /* QuestionCell.swift in Sources */,
 				CC17F7C81FB1ADDA003A679D /* GrammarsController.swift in Sources */,
-				CC17F7A51FB15E8A003A679D /* LessonsController.swift in Sources */,
 				CC0318151FA711A4002AB87D /* ViewController.swift in Sources */,
 				CC0318131FA711A4002AB87D /* AppDelegate.swift in Sources */,
 			);

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,15 +26,31 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwM-k8-nUt">
+                    <rect key="frame" x="305" y="597" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qwM-k8-nUt" secondAttribute="height" id="0e0-cV-Cw9"/>
+                        <constraint firstAttribute="width" constant="50" id="FHP-jR-UVO"/>
+                    </constraints>
+                    <state key="normal" image="check"/>
+                    <connections>
+                        <action selector="checkResultButtonDidTap:" destination="-1" eventType="touchUpInside" id="F17-xi-P3j"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="eYH-y2-Zao" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4TC-Je-SyZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="eYH-y2-Zao" secondAttribute="bottom" id="4at-op-0k4"/>
                 <constraint firstItem="eYH-y2-Zao" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="FG1-iQ-PZI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qwM-k8-nUt" secondAttribute="trailing" constant="20" id="QwD-4s-5p6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qwM-k8-nUt" secondAttribute="bottom" constant="20" id="QwQ-he-9M4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eYH-y2-Zao" secondAttribute="trailing" id="bRD-Wy-A6G"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <image name="check" width="60" height="60"/>
+    </resources>
 </document>

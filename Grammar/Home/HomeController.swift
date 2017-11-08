@@ -58,11 +58,14 @@ extension HomeController
             let listLessonController = ListLessonController(nibName: "ListLessonController", bundle: nil)
             self.navigationController?.pushViewController(listLessonController, animated: true)
         case 1:
-            let lessonTestController = LessonTestController(nibName: "LessonTestController", bundle: nil)
-            self.navigationController?.pushViewController(lessonTestController, animated: true)
+            print("index not fount")
+            let questionController = QuestionsController(nibName: "QuestionsController", bundle: nil)
+            questionController.listQuestions = self.getAllQuestionForTestFull()
+            self.navigationController?.pushViewController(questionController, animated: true)
         case 2:
-            let lessonsController =  LessonsController(nibName: "LessonsController", bundle: nil)
-            self.navigationController?.pushViewController(lessonsController, animated: true)
+            print("index not fount")
+//            let lessonsController =  LessonsController(nibName: "LessonsController", bundle: nil)
+//            self.navigationController?.pushViewController(lessonsController, animated: true)
         case 3:
             let questionsController =  QuestionsController(nibName: "QuestionsController", bundle: nil)
             self.navigationController?.pushViewController(questionsController, animated: true)
@@ -71,4 +74,24 @@ extension HomeController
         }
     }
     
+}
+
+extension HomeController
+{
+    func getAllQuestionForTestFull()->[Question]
+    {
+        var listQues = [Question]()
+        for lesson  in  AppModel.shareModel.lessons
+        {
+            for gr in lesson.grammars
+            {
+                let max = (UInt32)(gr.questions.count);
+                let r = Int(arc4random_uniform(max))
+                print("max : \(max) r : \(r) , g id : \(gr.id_)")
+                let q = gr.questions[r]
+                listQues.append(q)
+            }
+        }
+        return listQues;
+    }
 }

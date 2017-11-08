@@ -30,7 +30,7 @@ class QuestionDAO: NSObject {
                     "ID, Lesson_ID ,Grammar_ID,Question,Answer1,Answer2,Answer3,Answer4,CorrectAnswer,status \n" +
                     "FROM " +
                     "Question " +
-                    "WHERE Lesson_ID == \(String(l.id_!)) AND Grammar_ID == \(String(grammar.id_!));"
+                    "WHERE Lesson_ID == \(String(l.id_!)) AND Grammar_ID == \(String(grammar.index_in_lesson!));"
                 if let results =  self.db.executeQuery(query, withArgumentsIn: []){
                     while results.next() {
                         let question = Question(id_: Int(results.int(forColumn: "ID")), lessonId: Int(results.int(forColumn: "Lesson_ID")), grammarId:Int(results.int(forColumn: "Grammar_ID")), question: results.string(forColumn: "Question")!, answer1:results.string(forColumn: "Answer1")!, answer2:results.string(forColumn: "Answer2")!, answer3: results.string(forColumn: "Answer3")!, answer4: results.string(forColumn: "Answer4")!, correctAnswer: Int(results.int(forColumn: "CorrectAnswer")), status: Int(results.int(forColumn: "status")))

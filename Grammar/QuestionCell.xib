@@ -26,7 +26,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaS-ci-Ypa" customClass="DLRadioButton">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BaS-ci-Ypa" customClass="HIRadioButton" customModule="Grammar" customModuleProvider="target">
                         <rect key="frame" x="5" y="36" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="BaS-ci-Ypa" secondAttribute="height" id="I05-gQ-nek"/>
@@ -38,7 +38,7 @@
                             <outletCollection property="otherButtons" destination="DYP-Pv-hfp" id="hJ8-dq-07L"/>
                         </connections>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gh-Mq-up1" customClass="DLRadioButton">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gh-Mq-up1" customClass="HIRadioButton" customModule="Grammar" customModuleProvider="target">
                         <rect key="frame" x="5" y="64" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="EEe-Gb-9hX"/>
@@ -51,7 +51,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiq-Ld-105" customClass="DLRadioButton">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiq-Ld-105" customClass="HIRadioButton" customModule="Grammar" customModuleProvider="target">
                         <rect key="frame" x="5" y="92" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="1Nf-SR-8yI"/>
@@ -64,7 +64,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYP-Pv-hfp" customClass="DLRadioButton">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYP-Pv-hfp" customClass="HIRadioButton" customModule="Grammar" customModuleProvider="target">
                         <rect key="frame" x="5" y="120" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="BLf-Nc-o8y"/>
