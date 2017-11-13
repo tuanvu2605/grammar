@@ -27,7 +27,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mI-hr-JrW" customClass="BEMCheckBox">
-                        <rect key="frame" x="379" y="36" width="25" height="25"/>
+                        <rect key="frame" x="369" y="36" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="KT5-PY-SrD"/>
                             <constraint firstAttribute="width" secondItem="7mI-hr-JrW" secondAttribute="height" id="aIY-GI-a9r"/>
@@ -36,7 +36,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="AC5-Gk-qYh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eQw-1T-BW9"/>
-                    <constraint firstAttribute="trailing" secondItem="7mI-hr-JrW" secondAttribute="trailing" constant="5" id="ht5-iB-aDr"/>
+                    <constraint firstAttribute="trailing" secondItem="7mI-hr-JrW" secondAttribute="trailing" constant="15" id="ht5-iB-aDr"/>
                     <constraint firstItem="7mI-hr-JrW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sgb-jw-XKT"/>
                     <constraint firstItem="AC5-Gk-qYh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="z9X-ab-rum"/>
                 </constraints>

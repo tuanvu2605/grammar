@@ -24,6 +24,7 @@ class HomeController: BaseTableViewController {
         tblList.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: homeCellID)
         tblList.separatorStyle = .none
         self.title = controllerTitle
+
     }
 
 
@@ -58,14 +59,19 @@ extension HomeController
             let listLessonController = ListLessonController(nibName: "ListLessonController", bundle: nil)
             self.navigationController?.pushViewController(listLessonController, animated: true)
         case 1:
-            print("index not fount")
+            var listGr = [Grammar]()
+            for l in AppModel.shareModel.lessons
+            {
+                listGr.append(contentsOf: l.grammars)
+            }
             let questionController = QuestionsController(nibName: "QuestionsController", bundle: nil)
+            questionController.listGrammar = listGr;
+            questionController.title = "Test Full"
             questionController.listQuestions = self.getAllQuestionForTestFull()
             self.navigationController?.pushViewController(questionController, animated: true)
         case 2:
-            print("index not fount")
-//            let lessonsController =  LessonsController(nibName: "LessonsController", bundle: nil)
-//            self.navigationController?.pushViewController(lessonsController, animated: true)
+            let lessonsTestController =  LessonTestController(nibName: "LessonTestController", bundle: nil)
+            self.navigationController?.pushViewController(lessonsTestController, animated: true)
         case 3:
             let questionsController =  QuestionsController(nibName: "QuestionsController", bundle: nil)
             self.navigationController?.pushViewController(questionsController, animated: true)

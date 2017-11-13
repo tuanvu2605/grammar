@@ -17,6 +17,8 @@ class TitleCell: UITableViewCell {
         super.awakeFromNib()
 //        self.viewContent.layer.cornerRadius = 6.0
         self.backgroundColor = .clear
+        self.title.numberOfLines = 3
+        self.title.adjustsFontSizeToFitWidth = true
       
     }
     

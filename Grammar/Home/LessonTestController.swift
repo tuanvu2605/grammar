@@ -12,6 +12,8 @@ class LessonTestController: BaseTableViewController {
 
     @IBOutlet weak var tblListTest: UITableView!
     let lessonTestCellId = "lessonTestCellId"
+    var listLesson = [Lesson]()
+    var listChecked = [Bool]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "List Lesson"
@@ -20,6 +22,11 @@ class LessonTestController: BaseTableViewController {
         tblListTest.register(UINib(nibName: "CheckBoxCell", bundle: nil), forCellReuseIdentifier: lessonTestCellId)
         tblListTest.delegate = self;
         tblListTest.dataSource = self;
+        listLesson = AppModel.shareModel.lessons
+        listChecked = listLesson.map({ (l) -> Bool in
+            return false
+        })
+        tblListTest.reloadData()
         configueUI()
 
         // Do any additional setup after loading the view.
@@ -31,6 +38,27 @@ class LessonTestController: BaseTableViewController {
         let btnBack = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: self, action: #selector(backButtonDidTap))
         btnBack.tintColor = .white
         navigationItem.leftBarButtonItem = btnBack
+        
+        let selectedDone = UIBarButtonItem(image:#imageLiteral(resourceName: "checkmark"), style: .plain, target: self, action: #selector(buttonSelectedDoneDidTap))
+        selectedDone.tintColor = .white
+        navigationItem.rightBarButtonItem = selectedDone
+    }
+    
+    func buttonSelectedDoneDidTap()
+    {
+        let questionController = QuestionsController(nibName: "QuestionsController", bundle: nil)
+        var listLesson_ = [Lesson]()
+        for i in 0 ..< listChecked.count
+        {
+            if listChecked[i]
+            {
+               listLesson_.append(self.listLesson[i])
+            }
+        }
+        questionController.listQuestions = listQuestionsForTest(listLesson: listLesson_).ques
+        questionController.listGrammar = listQuestionsForTest(listLesson: listLesson_).gr
+        questionController.title = "Test Component"
+        self.navigationController?.pushViewController(questionController, animated: true)
     }
     
     func backButtonDidTap()
@@ -49,7 +77,7 @@ extension LessonTestController
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5;
+        return listLesson.count;
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -58,7 +86,10 @@ extension LessonTestController
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier:lessonTestCellId , for: indexPath) as! CheckBoxCell
-        cell.title.text = "List Lesson"
+        let lesson = listLesson[indexPath.row]
+        let isCheck = listChecked[indexPath.row]
+        cell.display_(lesson: lesson, isSelect: isCheck)
+        cell.delegate = self
         cell.selectionStyle = .none
         return cell;
     }
@@ -74,5 +105,48 @@ extension LessonTestController
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         super.tableView(tableView, didSelectRowAt: indexPath)
         
+    }
+}
+
+extension LessonTestController : CheckBoxCellDelegate
+{
+    func cellDidTapCheckBox(cell: CheckBoxCell, isSelected: Bool) {
+        let idx = self.tblListTest.indexPath(for: cell)
+        listChecked[(idx?.row)!] = isSelected;
+    }
+}
+
+extension LessonTestController
+{
+    func listQuestionsForTest(listLesson : [Lesson]) ->  (ques : [Question] , gr : [Grammar])
+    {
+        var listQuestion = [Question]()
+        var listGrammar = [Grammar]()
+        let numQuestionGrammar = listLesson.count < 3 ? 5 : (listLesson.count < 7 ? 4 :(listLesson.count < 10 ? 3 : (listLesson.count < 14 ? 2 : 1)))
+        for l in listLesson
+        {
+            for gr in l.grammars
+            {
+                var countQues = 0;
+                for q in gr.questions
+                {
+                    if q.status == 0 || q.status == 1
+                    {
+                        listQuestion.append(q)
+                        countQues = countQues + 1;
+                        if countQues >= numQuestionGrammar
+                        {
+                            break;
+                        }
+                        
+                    }
+                    if countQues > 0 && !listGrammar.contains(gr)
+                    {
+                        listGrammar.append(gr)
+                    }
+                }
+            }
+        }
+        return (listQuestion,listGrammar)
     }
 }

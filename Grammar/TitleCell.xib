@@ -21,8 +21,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGv-VV-cd5">
                         <rect key="frame" x="5" y="0.0" width="461" height="51.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RF-au-Kec">
-                                <rect key="frame" x="10" y="15" width="43.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RF-au-Kec">
+                                <rect key="frame" x="10" y="15" width="446" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <color key="textColor" red="0.3547133207" green="0.43946039679999999" blue="0.66217279429999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -30,6 +30,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7RF-au-Kec" secondAttribute="trailing" constant="5" id="3bL-zw-2fA"/>
                             <constraint firstItem="7RF-au-Kec" firstAttribute="leading" secondItem="BGv-VV-cd5" secondAttribute="leading" constant="10" id="PqV-Lo-vqL"/>
                             <constraint firstItem="7RF-au-Kec" firstAttribute="centerY" secondItem="BGv-VV-cd5" secondAttribute="centerY" id="Q3a-YK-esZ"/>
                         </constraints>
@@ -46,7 +47,7 @@
                 <outlet property="title" destination="7RF-au-Kec" id="zdx-X2-Zsx"/>
                 <outlet property="viewContent" destination="BGv-VV-cd5" id="cYU-4G-Pef"/>
             </connections>
-            <point key="canvasLocation" x="-225.5" y="-127"/>
+            <point key="canvasLocation" x="-662" y="-125"/>
         </tableViewCell>
     </objects>
 </document>

@@ -9,8 +9,13 @@
 import UIKit
 import BEMCheckBox
 
+protocol CheckBoxCellDelegate {
+    func cellDidTapCheckBox(cell : CheckBoxCell , isSelected : Bool)
+}
+
 class CheckBoxCell: UITableViewCell {
 
+    var delegate : CheckBoxCellDelegate?
     @IBOutlet weak var checkBox: BEMCheckBox!
     let oncheckColor = "#8cdd00"
 
@@ -24,16 +29,20 @@ class CheckBoxCell: UITableViewCell {
         checkBox.offAnimationType = .fade
         checkBox.animationDuration = 0.01
         checkBox.onCheckColor = UIColor(oncheckColor)!
-        
-
-       
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        title.adjustsFontSizeToFitWidth = true
+        checkBox.delegate = self;
     }
     
+    func display_(lesson : Lesson , isSelect : Bool)
+    {
+       title.text = lesson.title
+       checkBox.on = isSelect;
+    }
+}
+
+extension CheckBoxCell : BEMCheckBoxDelegate
+{
+    func didTap(_ checkBox: BEMCheckBox) {
+        self.delegate?.cellDidTapCheckBox(cell: self, isSelected: checkBox.on)
+    }
 }

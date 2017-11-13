@@ -19,6 +19,7 @@ class QuestionsController: BaseTableViewController {
     var listQuestions = [Question]()
     var type : QuestionType?
     var listAnswers = [Int]()
+    var listGrammar = [Grammar]()
     let questionCellId = "questionCellId"
     
     override func viewDidLoad() {
@@ -65,7 +66,7 @@ class QuestionsController: BaseTableViewController {
         func presentResult()
         {
             let resultController = ResultController(nibName: "ResultController", bundle: nil)
-            let navi = UINavigationController(rootViewController: resultController)
+//            let navi = UINavigationController(rootViewController: resultController)
             
             var result  = [(ques : Question , answer : Int)]()
             for i in 0 ..< listQuestions.count
@@ -73,9 +74,9 @@ class QuestionsController: BaseTableViewController {
                 result.append((ques:listQuestions[i] ,answer:listAnswers[i]))
             }
             
-            let filter = self.filterResult(type: .full, listGrammar: [], listQuestion: result)
+            let filter = self.filterResult(listGrammar:listGrammar, listQuestion: result)
             resultController.result = filter
-            self.present(navi, animated: true, completion: nil)
+            self.navigationController?.pushViewController(resultController, animated: true)
         }
         
         
@@ -123,45 +124,33 @@ extension QuestionsController
         super.tableView(tableView, didSelectRowAt: indexPath)
         
     }
-    
-    
-    
-    
-    
-    
+
 }
 
 extension QuestionsController
 {
-    func filterResult(type : QuestionType , listGrammar :[Grammar],  listQuestion : [(ques : Question , answer : Int)]) -> [(grammar : Grammar , numQuestion : Int , numCorrect : Int)]
+    func filterResult(listGrammar :[Grammar],  listQuestion : [(ques : Question , answer : Int)]) -> [(grammar : Grammar , numQuestion : Int , numCorrect : Int)]
     {
         var filter = [(grammar : Grammar , numQuestion : Int , numCorrect : Int)]()
-        
-        // full
-        if type == .full {
-            for l in AppModel.shareModel.lessons
+ 
+        for gr in listGrammar
+        {
+            let temp = listQuestion.filter({ $0.ques.grammar_id == gr.index_in_lesson && $0.ques.lesson_id == gr.lesson_id})
+            var numCorrect = 0;
+            for i in 0 ..< temp.count
             {
-                for gr in l.grammars
+                let ques = temp[i].ques
+                let ans = temp[i].answer
+                if ques.correct_answer == ans
                 {
-                    let temp = listQuestion.filter({ $0.ques.grammar_id == gr.index_in_lesson && $0.ques.lesson_id == l.id_})
-                    var numCorrect = 0;
-                    for i in 0 ..< temp.count
-                    {
-                        let ques = temp[i].ques
-                        let ans = temp[i].answer
-                        if ques.correct_answer == ans
-                        {
-                            numCorrect = numCorrect + 1
-                        }
-                    }
-                    let elementFilter = ((grammar : gr , numQuestion : temp.count , numCorrect : numCorrect))
-                    filter.append(elementFilter)
+                    numCorrect = numCorrect + 1
                 }
             }
+            let elementFilter = ((grammar : gr , numQuestion : temp.count , numCorrect : numCorrect))
+            filter.append(elementFilter)
         }
-        
-        //component
-        
+
+
         return filter;
     }
 }

@@ -42,7 +42,7 @@ class ResultController: BaseTableViewController {
     
     func backButtonDidTap()
     {
-        self.dismiss(animated: false, completion: nil)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 
 
