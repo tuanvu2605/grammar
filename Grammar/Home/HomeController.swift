@@ -59,6 +59,12 @@ extension HomeController
             let listLessonController = ListLessonController(nibName: "ListLessonController", bundle: nil)
             self.navigationController?.pushViewController(listLessonController, animated: true)
         case 1:
+            
+            if AppModel.shareModel.history == nil
+            {
+                AppModel.shareModel.history = History()
+            }
+            
             var listGr = [Grammar]()
             for l in AppModel.shareModel.lessons
             {
@@ -68,13 +74,20 @@ extension HomeController
             questionController.listGrammar = listGr;
             questionController.title = "Test Full"
             questionController.listQuestions = self.getAllQuestionForTestFull()
+            questionController.type = .full
+            AppModel.shareModel.history?.title = "Test Full";
             self.navigationController?.pushViewController(questionController, animated: true)
         case 2:
+            if AppModel.shareModel.history == nil
+            {
+                AppModel.shareModel.history = History()
+            }
+            
             let lessonsTestController =  LessonTestController(nibName: "LessonTestController", bundle: nil)
             self.navigationController?.pushViewController(lessonsTestController, animated: true)
         case 3:
-            let questionsController =  QuestionsController(nibName: "QuestionsController", bundle: nil)
-            self.navigationController?.pushViewController(questionsController, animated: true)
+            let testsController =  HistoryController(nibName: "HistoryController", bundle: nil)
+            self.navigationController?.pushViewController(testsController, animated: true)
         default:
             print("index not fount")
         }

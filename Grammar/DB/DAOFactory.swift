@@ -52,6 +52,14 @@ class DAOFactory: NSObject {
         return nil
     }
     
+    func historyDAO() -> HistoryDAO? {
+        if let db = connect() {
+            return HistoryDAO(db: db)
+        }
+        
+        return nil
+    }
+    
     func questionDAO() -> QuestionDAO? {
         if let db = connect() {
             return QuestionDAO(db: db)

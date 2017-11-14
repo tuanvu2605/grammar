@@ -58,12 +58,19 @@ class LessonTestController: BaseTableViewController {
         questionController.listQuestions = listQuestionsForTest(listLesson: listLesson_).ques
         questionController.listGrammar = listQuestionsForTest(listLesson: listLesson_).gr
         questionController.title = "Test Component"
+        questionController.type = .component
+        AppModel.shareModel.history?.title = "Test Component (\(listLesson_.count))"
         self.navigationController?.pushViewController(questionController, animated: true)
     }
     
     func backButtonDidTap()
     {
         self.navigationController?.popViewController(animated: true)
+        if (AppModel.shareModel.history?.isReviewed)! {
+            AppModel.shareModel.historyDAO.savehistory(his: AppModel.shareModel.history!)
+            AppModel.shareModel.history = nil;
+        }
+        
     }
 
 

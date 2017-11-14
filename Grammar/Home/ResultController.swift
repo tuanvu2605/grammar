@@ -26,8 +26,8 @@ class ResultController: BaseTableViewController {
         tblResult.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: resultCellId)
         tblResult.delegate = self;
         tblResult.dataSource = self;
-   
         configureUI()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -42,7 +42,7 @@ class ResultController: BaseTableViewController {
     
     func backButtonDidTap()
     {
-        self.navigationController?.popToRootViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
 
 

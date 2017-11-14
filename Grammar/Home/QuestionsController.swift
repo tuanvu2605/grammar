@@ -50,10 +50,16 @@ class QuestionsController: BaseTableViewController {
     func backButtonDidTap()
     {
         self.navigationController?.popViewController(animated: true)
+        if type == .full && (AppModel.shareModel.history?.isReviewed)!
+        {
+            AppModel.shareModel.historyDAO.savehistory(his: AppModel.shareModel.history!)
+            AppModel.shareModel.history = nil;
+        }
     }
 
 
     @IBAction func checkResultButtonDidTap(_ sender: UIButton) {
+        AppModel.shareModel.history?.isReviewed = true
         
         var count = 0
         for i in 0 ..< listAnswers.count
@@ -132,7 +138,7 @@ extension QuestionsController
     func filterResult(listGrammar :[Grammar],  listQuestion : [(ques : Question , answer : Int)]) -> [(grammar : Grammar , numQuestion : Int , numCorrect : Int)]
     {
         var filter = [(grammar : Grammar , numQuestion : Int , numCorrect : Int)]()
- 
+        var totalCorrectAnswer = 0;
         for gr in listGrammar
         {
             let temp = listQuestion.filter({ $0.ques.grammar_id == gr.index_in_lesson && $0.ques.lesson_id == gr.lesson_id})
@@ -146,9 +152,11 @@ extension QuestionsController
                     numCorrect = numCorrect + 1
                 }
             }
+            totalCorrectAnswer = totalCorrectAnswer + numCorrect;
             let elementFilter = ((grammar : gr , numQuestion : temp.count , numCorrect : numCorrect))
             filter.append(elementFilter)
         }
+        AppModel.shareModel.history?.score = "\(totalCorrectAnswer)/\(listQuestion.count)"
 
 
         return filter;

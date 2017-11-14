@@ -14,10 +14,10 @@ class Lesson: NSObject {
     var title = String()
     var status : Int!
     var number_of_grammar : Int!
-    var score : Int!
+    var score : String!
     var grammars  = [Grammar]()
     
-    init(id_ : Int , title : String , status : Int , numberOfGrammar : Int , score : Int) {
+    init(id_ : Int , title : String , status : Int , numberOfGrammar : Int , score : String) {
         self.id_ = id_;
         self.status = status;
         self.number_of_grammar = numberOfGrammar;

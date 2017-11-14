@@ -30,7 +30,7 @@ class LessonDAO: NSObject {
         var lessons = Array<Lesson>()
         if let results =  self.db.executeQuery(LessonDAO.SQLSelect, withArgumentsIn: []){
             while results.next() {
-                let lesson = Lesson(id_: Int(results.int(forColumn: "ID")), title:results.string(forColumn: "Title")!, status: Int(results.int(forColumn: "Status")), numberOfGrammar: Int(results.int(forColumn: "NumOfGrammar")), score: Int(results.int(forColumn: "Score")))
+                let lesson = Lesson(id_: Int(results.int(forColumn: "ID")), title:results.string(forColumn: "Title")!, status: Int(results.int(forColumn: "Status")), numberOfGrammar: Int(results.int(forColumn: "NumOfGrammar")), score: results.string(forColumn: "Score")!)
                 lessons.append(lesson)
             }
         }
