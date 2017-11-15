@@ -11,6 +11,7 @@ import UIKit
 enum QuestionType {
     case full
     case component
+    case history
 }
 
 class QuestionsController: BaseTableViewController {
@@ -21,6 +22,9 @@ class QuestionsController: BaseTableViewController {
     var listAnswers = [Int]()
     var listGrammar = [Grammar]()
     let questionCellId = "questionCellId"
+    var isEnableReviewButton = Bool()
+    var isEnableReviewMode = Bool()
+    var btnReview : UIBarButtonItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,20 +35,35 @@ class QuestionsController: BaseTableViewController {
         tblQuestions.dataSource = self;
         tblQuestions.estimatedRowHeight = 300;
         tblQuestions.rowHeight = UITableViewAutomaticDimension
-        listAnswers = listQuestions.map({ (q) -> Int in
-            return 0;
-        })
         configueUI()
 
         // Do any additional setup after loading the view.
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isEnableReviewButton
+        {
+            self.btnReview = UIBarButtonItem(image:#imageLiteral(resourceName: "CheckList"), style: .plain, target: self, action: #selector(enableReviewMode))
+            self.btnReview?.tintColor = .white
+            navigationItem.rightBarButtonItem = btnReview
+        }else
+        {
+           navigationItem.rightBarButtonItems = []
+        }
+    }
     
+    func enableReviewMode()
+    {
+        isEnableReviewMode = true
+        self.tblQuestions.reloadData()
+    }
     func configueUI()
     {
         // custom back button
         let btnBack = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: self, action: #selector(backButtonDidTap))
         btnBack.tintColor = .white
         navigationItem.leftBarButtonItem = btnBack
+        
     }
     
     func backButtonDidTap()
@@ -54,6 +73,11 @@ class QuestionsController: BaseTableViewController {
         {
             AppModel.shareModel.historyDAO.savehistory(his: AppModel.shareModel.history!)
             AppModel.shareModel.history = nil;
+        }
+        if type == .history && (AppModel.shareModel.history?.isReviewed)!
+        {
+            AppModel.shareModel.historyDAO.updateHistory(his: AppModel.shareModel.history!)
+           AppModel.shareModel.history = nil;
         }
     }
 
@@ -72,6 +96,7 @@ class QuestionsController: BaseTableViewController {
         func presentResult()
         {
             let resultController = ResultController(nibName: "ResultController", bundle: nil)
+            resultController.questionController = self
 //            let navi = UINavigationController(rootViewController: resultController)
             
             var result  = [(ques : Question , answer : Int)]()
@@ -122,7 +147,14 @@ extension QuestionsController
         let answer = listAnswers[indexPath.section]
         cell.delegate = self
         cell.selectionStyle = .none
-        cell.display_(question: ques , index: indexPath.section , answer: answer)
+        if isEnableReviewMode
+        {
+            cell.displayReviewMode(question: ques , index: indexPath.section , answer: answer)
+        }else
+        {
+          cell.display_(question: ques , index: indexPath.section , answer: answer)
+        }
+        
         return cell;
     }
     
@@ -137,9 +169,41 @@ extension QuestionsController
 {
     func filterResult(listGrammar :[Grammar],  listQuestion : [(ques : Question , answer : Int)]) -> [(grammar : Grammar , numQuestion : Int , numCorrect : Int)]
     {
+        var grammars  = [Grammar]()
+        if listGrammar.count < 1 {
+            let listGrIdAndLessonId : [(grID : Int , lessonId : Int)] = listQuestion.map { (arg0) -> (grID : Int  , lessonId : Int) in
+                let (ques , _) = arg0
+                return (ques.grammar_id , ques.lesson_id)
+            }
+            
+            var uniList = [(grID : Int , lessonId : Int)]()
+            for i in 0 ..< listGrIdAndLessonId.count
+            {
+                let e = listGrIdAndLessonId[i]
+                if i == 0
+                {
+                    uniList.append(listGrIdAndLessonId[0])
+                }else
+                {
+                    let check =  uniList.contains(where: { (arg0) -> Bool in
+                        let (grID , lessonId) = arg0
+                        return (grID == e.grID && lessonId == e.lessonId)
+                    })
+                    if !check
+                    {
+                        uniList.append(e)
+                    }
+                }
+            }
+            grammars = AppModel.shareModel.grammarDAO.loadGrammar(tuples: uniList)
+        }else
+        {
+           grammars = listGrammar
+        }
+        
         var filter = [(grammar : Grammar , numQuestion : Int , numCorrect : Int)]()
         var totalCorrectAnswer = 0;
-        for gr in listGrammar
+        for gr in grammars
         {
             let temp = listQuestion.filter({ $0.ques.grammar_id == gr.index_in_lesson && $0.ques.lesson_id == gr.lesson_id})
             var numCorrect = 0;
@@ -157,7 +221,9 @@ extension QuestionsController
             filter.append(elementFilter)
         }
         AppModel.shareModel.history?.score = "\(totalCorrectAnswer)/\(listQuestion.count)"
-
+        AppModel.shareModel.history?.listQuestionAndAnswer = listQuestion;
+        
+        
 
         return filter;
     }
@@ -169,4 +235,6 @@ extension QuestionsController : QuestionCellDelegate
         let ipath = tblQuestions.indexPath(for: cell)
         listAnswers[(ipath?.section)!] = answer
     }
+    
+    
 }

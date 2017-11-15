@@ -11,8 +11,6 @@ import FMDB
 
 class GrammarDAO: NSObject {
     
-
-    
     private let db: FMDatabase
     init(db: FMDatabase) {
         self.db = db
@@ -41,6 +39,29 @@ class GrammarDAO: NSObject {
             }
             
         }
+    }
+    
+    func loadGrammar(tuples: [(grID : Int , lessonId : Int)]) -> [Grammar]
+    {
+        var grammars = [Grammar]()
+        for t in tuples {
+            let query  = "" +
+                "SELECT " +
+                "ID, Lesson_ID , IndexInLesson , Title, Status, Content \n" +
+                "FROM " +
+                "Grammar " +
+            "WHERE Lesson_ID == \(String(t.lessonId)) AND IndexInLesson == \(String(t.grID)) ;"
+            if let results =  self.db.executeQuery(query, withArgumentsIn: []){
+                while results.next() {
+                    
+                    let grammar = Grammar(id_: Int(results.int(forColumn: "ID")), lessionId: Int(results.int(forColumn: "Lesson_ID")), indexInLesstion: Int(results.int(forColumn: "IndexInLesson")), title: results.string(forColumn: "Title")!, status: Int(results.int(forColumn: "Status")), content: results.string(forColumn: "Content")!)
+                    grammars.append(grammar)
+                }
+                grammars.sort(by: {$0.index_in_lesson < $1.index_in_lesson})
+            }
+            
+        }
+        return grammars;
     }
     
     

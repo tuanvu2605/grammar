@@ -46,6 +46,7 @@ class LessonTestController: BaseTableViewController {
     
     func buttonSelectedDoneDidTap()
     {
+       
         let questionController = QuestionsController(nibName: "QuestionsController", bundle: nil)
         var listLesson_ = [Lesson]()
         for i in 0 ..< listChecked.count
@@ -55,12 +56,18 @@ class LessonTestController: BaseTableViewController {
                listLesson_.append(self.listLesson[i])
             }
         }
-        questionController.listQuestions = listQuestionsForTest(listLesson: listLesson_).ques
-        questionController.listGrammar = listQuestionsForTest(listLesson: listLesson_).gr
-        questionController.title = "Test Component"
-        questionController.type = .component
-        AppModel.shareModel.history?.title = "Test Component (\(listLesson_.count))"
-        self.navigationController?.pushViewController(questionController, animated: true)
+        if listQuestionsForTest(listLesson: listLesson_).gr.count > 0 {
+            questionController.listQuestions = listQuestionsForTest(listLesson: listLesson_).ques
+            questionController.listGrammar = listQuestionsForTest(listLesson: listLesson_).gr
+            questionController.listAnswers = questionController.listQuestions.map({ (q) -> Int in
+                return 0;
+            })
+            questionController.title = "Test Component"
+            questionController.type = .component
+            AppModel.shareModel.history?.title = "Test Component (\(listLesson_.count))"
+            self.navigationController?.pushViewController(questionController, animated: true)
+        }
+        
     }
     
     func backButtonDidTap()

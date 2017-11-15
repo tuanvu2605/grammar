@@ -31,7 +31,6 @@
 		CC17F7BD1FB196BF003A679D /* DAOFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7BC1FB196BF003A679D /* DAOFactory.swift */; };
 		CC17F7BF1FB1978E003A679D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7BE1FB1978E003A679D /* AppModel.swift */; };
 		CC17F7C11FB19CCA003A679D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CC17F7C01FB19CCA003A679D /* libsqlite3.tbd */; };
-		CC17F7C31FB1A189003A679D /* gm.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CC17F7C21FB1A189003A679D /* gm.sqlite */; };
 		CC17F7C51FB1A5E7003A679D /* GrammarDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7C41FB1A5E7003A679D /* GrammarDAO.swift */; };
 		CC17F7C81FB1ADDA003A679D /* GrammarsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC17F7C61FB1ADDA003A679D /* GrammarsController.swift */; };
 		CC17F7C91FB1ADDA003A679D /* GrammarsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC17F7C71FB1ADDA003A679D /* GrammarsController.xib */; };
@@ -41,6 +40,8 @@
 		CC62AC5D1FBA9D66003DCDBF /* HistoryDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62AC5C1FBA9D66003DCDBF /* HistoryDAO.swift */; };
 		CC62AC601FBAA280003DCDBF /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62AC5E1FBAA280003DCDBF /* HistoryController.swift */; };
 		CC62AC611FBAA280003DCDBF /* HistoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC62AC5F1FBAA280003DCDBF /* HistoryController.xib */; };
+		CC62AC631FBBE4E9003DCDBF /* TestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62AC621FBBE4E9003DCDBF /* TestDetail.swift */; };
+		CC62AC651FBC135E003DCDBF /* gm.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CC62AC641FBC135D003DCDBF /* gm.sqlite */; };
 		CCDFB4CE1FB069990031195C /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFB4CC1FB069990031195C /* HomeController.swift */; };
 		CCDFB4CF1FB069990031195C /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFB4CD1FB069990031195C /* HomeController.xib */; };
 		CCDFB4D31FB072170031195C /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFB4D11FB072170031195C /* BaseTableViewController.swift */; };
@@ -83,7 +84,6 @@
 		CC17F7BC1FB196BF003A679D /* DAOFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOFactory.swift; sourceTree = "<group>"; };
 		CC17F7BE1FB1978E003A679D /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
 		CC17F7C01FB19CCA003A679D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		CC17F7C21FB1A189003A679D /* gm.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = gm.sqlite; sourceTree = "<group>"; };
 		CC17F7C41FB1A5E7003A679D /* GrammarDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarDAO.swift; sourceTree = "<group>"; };
 		CC17F7C61FB1ADDA003A679D /* GrammarsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrammarsController.swift; sourceTree = "<group>"; };
 		CC17F7C71FB1ADDA003A679D /* GrammarsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GrammarsController.xib; sourceTree = "<group>"; };
@@ -93,6 +93,8 @@
 		CC62AC5C1FBA9D66003DCDBF /* HistoryDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDAO.swift; sourceTree = "<group>"; };
 		CC62AC5E1FBAA280003DCDBF /* HistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		CC62AC5F1FBAA280003DCDBF /* HistoryController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryController.xib; sourceTree = "<group>"; };
+		CC62AC621FBBE4E9003DCDBF /* TestDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDetail.swift; sourceTree = "<group>"; };
+		CC62AC641FBC135D003DCDBF /* gm.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = gm.sqlite; sourceTree = "<group>"; };
 		CCDFB4CC1FB069990031195C /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		CCDFB4CD1FB069990031195C /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
 		CCDFB4D11FB072170031195C /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -184,7 +186,7 @@
 		CC17F7AF1FB17709003A679D /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				CC17F7C21FB1A189003A679D /* gm.sqlite */,
+				CC62AC641FBC135D003DCDBF /* gm.sqlite */,
 				CC17F7B21FB17A97003A679D /* Grammar.swift */,
 				CC17F7B41FB17BE1003A679D /* Lesson.swift */,
 				CC17F7B61FB17CAD003A679D /* Question.swift */,
@@ -195,6 +197,7 @@
 				CC17F7BE1FB1978E003A679D /* AppModel.swift */,
 				CC62AC5A1FBA9C9F003DCDBF /* History.swift */,
 				CC62AC5C1FBA9D66003DCDBF /* HistoryDAO.swift */,
+				CC62AC621FBBE4E9003DCDBF /* TestDetail.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				CCDFB4E41FB152850031195C /* LessonTestController.xib in Resources */,
 				CC0318271FA71221002AB87D /* TitleCell.xib in Resources */,
 				CC03181D1FA711A4002AB87D /* LaunchScreen.storyboard in Resources */,
+				CC62AC651FBC135E003DCDBF /* gm.sqlite in Resources */,
 				CCDFB4D41FB072170031195C /* BaseTableViewController.xib in Resources */,
 				CC17F7C91FB1ADDA003A679D /* GrammarsController.xib in Resources */,
 				CC03181A1FA711A4002AB87D /* Assets.xcassets in Resources */,
@@ -309,7 +313,6 @@
 				CC0241331FB2FCAB0094FEFF /* ResultController.xib in Resources */,
 				CC0318181FA711A4002AB87D /* Main.storyboard in Resources */,
 				CCDFB4D81FB073120031195C /* ListLessonController.xib in Resources */,
-				CC17F7C31FB1A189003A679D /* gm.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +397,7 @@
 				CC17F7C81FB1ADDA003A679D /* GrammarsController.swift in Sources */,
 				CC0318151FA711A4002AB87D /* ViewController.swift in Sources */,
 				CC0318131FA711A4002AB87D /* AppDelegate.swift in Sources */,
+				CC62AC631FBBE4E9003DCDBF /* TestDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +523,7 @@
 			baseConfigurationReference = A4C868F8EDFA9A740CD8E67F /* Pods-Grammar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = XY29E79Z8X;
 				INFOPLIST_FILE = Grammar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -533,6 +538,7 @@
 			baseConfigurationReference = C9FB9E3C2B2692534F733FC1 /* Pods-Grammar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = XY29E79Z8X;
 				INFOPLIST_FILE = Grammar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

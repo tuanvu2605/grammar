@@ -22,8 +22,15 @@ class HistoryController: BaseTableViewController {
         tblHistory.delegate = self;
         tblHistory.dataSource = self;
         configueUI()
-        self.listHistory  = AppModel.shareModel.historyDAO.loadHistories()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.listHistory  = AppModel.shareModel.historyDAO.loadHistories()
+        self.tblHistory.reloadData()
+        
     }
     
     func configueUI()
@@ -73,6 +80,18 @@ extension HistoryController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         super.tableView(tableView, didSelectRowAt: indexPath)
+        let h = listHistory[indexPath.section]
+        let listTestDetails = AppModel.shareModel.historyDAO.loadTestDetails(hisId: h.id_)
+        let listQuestion = AppModel.shareModel.questionDAO.loadQuestionWithListTestDetail(testDetails:listTestDetails)
+        let questionController = QuestionsController(nibName: "QuestionsController", bundle: nil)
+        questionController.title = "Test Detail"
+        questionController.listQuestions = listQuestion
+        questionController.listAnswers = listTestDetails.map({ (detail) -> Int in
+            return detail.userAnswer;
+        })
+        questionController.type = .history
+        AppModel.shareModel.history = h;
+        self.navigationController?.pushViewController(questionController, animated: true)
         
     }
 }

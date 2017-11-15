@@ -35,6 +35,9 @@ class QuestionCell: UITableViewCell {
     var listAnswerTitle = [UILabel]() ;
     var listButtons = [DLRadioButton]();
     
+    
+    let failColor = "#f49f9f"
+    let successColor = "#9ff39f"
 
     
     override func awakeFromNib() {
@@ -86,6 +89,46 @@ class QuestionCell: UITableViewCell {
             btn.isSelected = true
             btn.deselectOtherButtons()
         }
+    }
+    
+    func displayReviewMode(question : Question , index : Int , answer : Int)
+    {
+        lblQuestion.text = "\(index + 1). " + question.question;
+        if listAnswerTitle.count == question.listAnswers.count
+        {
+            for i in 0 ..< question.listAnswers.count{
+                let l = listAnswerTitle[i];
+                l.text = question.listAnswers[i]
+            }
+        }
+        
+        btnA.isMultipleSelectionEnabled = true
+        if question.correct_answer == answer
+        {
+            let btn = listButtons[answer]
+            btn.isSelected = true
+            btn.indicatorColor = UIColor(successColor)!
+            btn.iconColor = UIColor(successColor)!
+            btn.deselectOtherButtons()
+        }else if answer == 0 {
+            let btn = listButtons[question.correct_answer]
+            btn.isSelected = true
+            btn.indicatorColor = UIColor(successColor)!
+            btn.iconColor = UIColor(successColor)!
+            btn.deselectOtherButtons()
+        }else
+        {
+            let btnR = listButtons[question.correct_answer]
+            btnR.isSelected = true
+            btnR.indicatorColor = UIColor(successColor)!
+            btnR.iconColor = UIColor(successColor)!
+            
+            let btnW = listButtons[answer]
+            btnW.isSelected = true
+            btnW.indicatorColor = UIColor(failColor)!
+            btnW.iconColor = UIColor(failColor)!
+        }
+        
     }
 
     

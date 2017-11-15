@@ -16,6 +16,7 @@ class History: NSObject {
     var status : Int!
     var score : String!
     var isReviewed = Bool()
+    var listQuestionAndAnswer = [(ques : Question , answer : Int)]()
 
     
     override init() {

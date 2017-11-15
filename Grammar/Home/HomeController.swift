@@ -74,6 +74,9 @@ extension HomeController
             questionController.listGrammar = listGr;
             questionController.title = "Test Full"
             questionController.listQuestions = self.getAllQuestionForTestFull()
+            questionController.listAnswers = questionController.listQuestions.map({ (q) -> Int in
+                return 0;
+            })
             questionController.type = .full
             AppModel.shareModel.history?.title = "Test Full";
             self.navigationController?.pushViewController(questionController, animated: true)
