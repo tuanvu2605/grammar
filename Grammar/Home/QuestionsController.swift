@@ -150,12 +150,14 @@ extension QuestionsController
         if isEnableReviewMode
         {
             cell.displayReviewMode(question: ques , index: indexPath.section , answer: answer)
+            return cell;
         }else
         {
           cell.display_(question: ques , index: indexPath.section , answer: answer)
+          return cell;
         }
         
-        return cell;
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -214,9 +216,19 @@ extension QuestionsController
                 if ques.correct_answer == ans
                 {
                     numCorrect = numCorrect + 1
+                }else
+                {
                 }
             }
             totalCorrectAnswer = totalCorrectAnswer + numCorrect;
+            if numCorrect == temp.count
+            {
+                AppModel.shareModel.grammarDAO.updateGrammarStatus(grId: gr.id_, status: 2)
+            }
+            if numCorrect == temp.count
+            {
+                AppModel.shareModel.grammarDAO.updateGrammarStatus(grId: gr.id_, status: 1)
+            }
             let elementFilter = ((grammar : gr , numQuestion : temp.count , numCorrect : numCorrect))
             filter.append(elementFilter)
         }

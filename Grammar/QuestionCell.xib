@@ -20,7 +20,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="505" height="151.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oT2-os-z24">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oT2-os-z24" customClass="MDHTMLLabel">
                         <rect key="frame" x="5" y="10" width="495" height="19.5"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                         <nil key="textColor"/>
@@ -33,9 +33,9 @@
                             <constraint firstAttribute="width" constant="25" id="RcX-SI-NSM"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="otherButtons" destination="0gh-Mq-up1" id="q6Z-UY-tFh"/>
-                            <outletCollection property="otherButtons" destination="hiq-Ld-105" id="caj-OR-Vbd"/>
-                            <outletCollection property="otherButtons" destination="DYP-Pv-hfp" id="hJ8-dq-07L"/>
+                            <outletCollection property="otherButtons" destination="0gh-Mq-up1" id="lRF-Xe-qQR"/>
+                            <outletCollection property="otherButtons" destination="hiq-Ld-105" id="QcA-N9-gTb"/>
+                            <outletCollection property="otherButtons" destination="DYP-Pv-hfp" id="ayH-EQ-joc"/>
                         </connections>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gh-Mq-up1" customClass="HIRadioButton" customModule="Grammar" customModuleProvider="target">

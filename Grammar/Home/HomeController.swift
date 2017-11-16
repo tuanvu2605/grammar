@@ -91,6 +91,11 @@ extension HomeController
         case 3:
             let testsController =  HistoryController(nibName: "HistoryController", bundle: nil)
             self.navigationController?.pushViewController(testsController, animated: true)
+        case 4:
+            let studyHistoryController =  StudyHistoryController(nibName: "StudyHistoryController", bundle: nil)
+            self.navigationController?.pushViewController(studyHistoryController, animated: true)
+        case 5:
+            contactSupport()
         default:
             print("index not fount")
         }
@@ -115,5 +120,22 @@ extension HomeController
             }
         }
         return listQues;
+    }
+    
+    func contactSupport()
+    {
+        let fbFp = "fb://profile/175261349546209"
+        let fbURL = "https://www.facebook.com/SoftForLife.vn"
+        
+        if UIApplication.shared.canOpenURL(URL(string: fbFp)!)
+        {
+           UIApplication.shared.openURL(URL(string: fbFp)!)
+        }else
+        {
+            if UIApplication.shared.canOpenURL(URL(string: fbURL)!)
+            {
+                UIApplication.shared.openURL(URL(string: fbURL)!)
+            }
+        }
     }
 }

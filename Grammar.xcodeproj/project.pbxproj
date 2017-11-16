@@ -42,6 +42,12 @@
 		CC62AC611FBAA280003DCDBF /* HistoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC62AC5F1FBAA280003DCDBF /* HistoryController.xib */; };
 		CC62AC631FBBE4E9003DCDBF /* TestDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62AC621FBBE4E9003DCDBF /* TestDetail.swift */; };
 		CC62AC651FBC135E003DCDBF /* gm.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CC62AC641FBC135D003DCDBF /* gm.sqlite */; };
+		CC62AC751FBD7716003DCDBF /* StudyHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62AC731FBD7716003DCDBF /* StudyHistoryController.swift */; };
+		CC62AC761FBD7716003DCDBF /* StudyHistoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC62AC741FBD7716003DCDBF /* StudyHistoryController.xib */; };
+		CC62AC791FBD77A9003DCDBF /* StudyHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC62AC771FBD77A9003DCDBF /* StudyHistoryCell.swift */; };
+		CC62AC7A1FBD77A9003DCDBF /* StudyHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC62AC781FBD77A9003DCDBF /* StudyHistoryCell.xib */; };
+		CC62AC7E1FBD8D7D003DCDBF /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC62AC7C1FBD8D7D003DCDBF /* SoundManager.m */; };
+		CC62AC811FBD9993003DCDBF /* Tock.caf in Resources */ = {isa = PBXBuildFile; fileRef = CC62AC801FBD9993003DCDBF /* Tock.caf */; };
 		CCDFB4CE1FB069990031195C /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFB4CC1FB069990031195C /* HomeController.swift */; };
 		CCDFB4CF1FB069990031195C /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDFB4CD1FB069990031195C /* HomeController.xib */; };
 		CCDFB4D31FB072170031195C /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDFB4D11FB072170031195C /* BaseTableViewController.swift */; };
@@ -95,6 +101,14 @@
 		CC62AC5F1FBAA280003DCDBF /* HistoryController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryController.xib; sourceTree = "<group>"; };
 		CC62AC621FBBE4E9003DCDBF /* TestDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDetail.swift; sourceTree = "<group>"; };
 		CC62AC641FBC135D003DCDBF /* gm.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = gm.sqlite; sourceTree = "<group>"; };
+		CC62AC731FBD7716003DCDBF /* StudyHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyHistoryController.swift; sourceTree = "<group>"; };
+		CC62AC741FBD7716003DCDBF /* StudyHistoryController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyHistoryController.xib; sourceTree = "<group>"; };
+		CC62AC771FBD77A9003DCDBF /* StudyHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyHistoryCell.swift; sourceTree = "<group>"; };
+		CC62AC781FBD77A9003DCDBF /* StudyHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyHistoryCell.xib; sourceTree = "<group>"; };
+		CC62AC7B1FBD8D7B003DCDBF /* Grammar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Grammar-Bridging-Header.h"; sourceTree = "<group>"; };
+		CC62AC7C1FBD8D7D003DCDBF /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
+		CC62AC7D1FBD8D7D003DCDBF /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		CC62AC801FBD9993003DCDBF /* Tock.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tock.caf; sourceTree = "<group>"; };
 		CCDFB4CC1FB069990031195C /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		CCDFB4CD1FB069990031195C /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
 		CCDFB4D11FB072170031195C /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +174,7 @@
 		CC0318111FA711A4002AB87D /* Grammar */ = {
 			isa = PBXGroup;
 			children = (
+				CC62AC7F1FBD998A003DCDBF /* Sound */,
 				CC17F7AF1FB17709003A679D /* DB */,
 				CCDFB4D91FB079480031195C /* Helper */,
 				CC0318121FA711A4002AB87D /* AppDelegate.swift */,
@@ -175,6 +190,8 @@
 				CC17F7A81FB16372003A679D /* QuestionCell.xib */,
 				CC62AC561FBA9799003DCDBF /* HistoryCell.swift */,
 				CC62AC571FBA9799003DCDBF /* HistoryCell.xib */,
+				CC62AC771FBD77A9003DCDBF /* StudyHistoryCell.swift */,
+				CC62AC781FBD77A9003DCDBF /* StudyHistoryCell.xib */,
 				CC0318161FA711A4002AB87D /* Main.storyboard */,
 				CC0318191FA711A4002AB87D /* Assets.xcassets */,
 				CC03181B1FA711A4002AB87D /* LaunchScreen.storyboard */,
@@ -202,6 +219,14 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		CC62AC7F1FBD998A003DCDBF /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				CC62AC801FBD9993003DCDBF /* Tock.caf */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
 		CCDFB4D01FB0699E0031195C /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +246,8 @@
 				CC0241311FB2FCAB0094FEFF /* ResultController.xib */,
 				CC62AC5E1FBAA280003DCDBF /* HistoryController.swift */,
 				CC62AC5F1FBAA280003DCDBF /* HistoryController.xib */,
+				CC62AC731FBD7716003DCDBF /* StudyHistoryController.swift */,
+				CC62AC741FBD7716003DCDBF /* StudyHistoryController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -228,7 +255,10 @@
 		CCDFB4D91FB079480031195C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				CC62AC7D1FBD8D7D003DCDBF /* SoundManager.h */,
+				CC62AC7C1FBD8D7D003DCDBF /* SoundManager.m */,
 				CC02412E1FB2ECCA0094FEFF /* HIRadioButton.swift */,
+				CC62AC7B1FBD8D7B003DCDBF /* Grammar-Bridging-Header.h */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -269,6 +299,7 @@
 					CC03180E1FA711A4002AB87D = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = XY29E79Z8X;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -300,9 +331,12 @@
 				CCDFB4DE1FB14F9B0031195C /* CheckBoxCell.xib in Resources */,
 				CC17F7AA1FB16372003A679D /* QuestionCell.xib in Resources */,
 				CC62AC591FBA9799003DCDBF /* HistoryCell.xib in Resources */,
+				CC62AC761FBD7716003DCDBF /* StudyHistoryController.xib in Resources */,
+				CC62AC7A1FBD77A9003DCDBF /* StudyHistoryCell.xib in Resources */,
 				CC17F7A21FB15DA9003A679D /* ContentCell.xib in Resources */,
 				CC17F7AE1FB16CCF003A679D /* QuestionsController.xib in Resources */,
 				CCDFB4E41FB152850031195C /* LessonTestController.xib in Resources */,
+				CC62AC811FBD9993003DCDBF /* Tock.caf in Resources */,
 				CC0318271FA71221002AB87D /* TitleCell.xib in Resources */,
 				CC03181D1FA711A4002AB87D /* LaunchScreen.storyboard in Resources */,
 				CC62AC651FBC135E003DCDBF /* gm.sqlite in Resources */,
@@ -373,11 +407,14 @@
 			files = (
 				CC17F7B71FB17CAD003A679D /* Question.swift in Sources */,
 				CC02412F1FB2ECCA0094FEFF /* HIRadioButton.swift in Sources */,
+				CC62AC751FBD7716003DCDBF /* StudyHistoryController.swift in Sources */,
+				CC62AC7E1FBD8D7D003DCDBF /* SoundManager.m in Sources */,
 				CCDFB4DD1FB14F9B0031195C /* CheckBoxCell.swift in Sources */,
 				CCDFB4CE1FB069990031195C /* HomeController.swift in Sources */,
 				CC0241321FB2FCAB0094FEFF /* ResultController.swift in Sources */,
 				CC0318261FA71221002AB87D /* TitleCell.swift in Sources */,
 				CC17F7A11FB15DA9003A679D /* ContentCell.swift in Sources */,
+				CC62AC791FBD77A9003DCDBF /* StudyHistoryCell.swift in Sources */,
 				CC17F7BB1FB17FF6003A679D /* LessonDAO.swift in Sources */,
 				CCDFB4E31FB152850031195C /* LessonTestController.swift in Sources */,
 				CC17F7B51FB17BE1003A679D /* Lesson.swift in Sources */,
@@ -524,11 +561,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XY29E79Z8X;
 				INFOPLIST_FILE = Grammar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = club.iosdevelopers.Grammar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Grammar/Helper/Grammar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -539,11 +580,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XY29E79Z8X;
 				INFOPLIST_FILE = Grammar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = club.iosdevelopers.Grammar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Grammar/Helper/Grammar-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

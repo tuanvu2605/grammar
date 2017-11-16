@@ -8,6 +8,7 @@
 
 import UIKit
 import DLRadioButton
+import MDHTMLLabel
 
 
 protocol QuestionCellDelegate {
@@ -18,7 +19,7 @@ class QuestionCell: UITableViewCell {
 
     var delegate : QuestionCellDelegate?
 
-    @IBOutlet weak var lblQuestion: UILabel!
+    @IBOutlet weak var lblQuestion: MDHTMLLabel!
     @IBOutlet weak var lblAnswerA: UILabel!
     @IBOutlet weak var lblAnswerB: UILabel!
     @IBOutlet weak var lblAnswerC: UILabel!
@@ -59,7 +60,7 @@ class QuestionCell: UITableViewCell {
         {
             let btn = listButtons[i]
             btn.iconSize = 22;
-            btn.indicatorSize = 14;
+            btn.indicatorSize = 12;
             btn.indicatorColor = UIColor(indicatorColor)!
             btn.iconColor = UIColor(indicatorColor)!
             btn.backgroundColor = .clear
@@ -69,7 +70,7 @@ class QuestionCell: UITableViewCell {
     
     func display_(question : Question , index : Int , answer : Int)
     {
-        lblQuestion.text = "\(index + 1). " + question.question;
+        lblQuestion.htmlText = "\(index + 1). " + question.question;
         if listAnswerTitle.count == question.listAnswers.count
         {
             for i in 0 ..< question.listAnswers.count{
@@ -85,7 +86,7 @@ class QuestionCell: UITableViewCell {
             }
         }else
         {
-            let btn = listButtons[answer]
+            let btn = listButtons[answer-1]
             btn.isSelected = true
             btn.deselectOtherButtons()
         }
@@ -93,7 +94,8 @@ class QuestionCell: UITableViewCell {
     
     func displayReviewMode(question : Question , index : Int , answer : Int)
     {
-        lblQuestion.text = "\(index + 1). " + question.question;
+        print("question answer : \(question.correct_answer) user answer \(answer)")
+        lblQuestion.htmlText = "\(index + 1). " + question.question;
         if listAnswerTitle.count == question.listAnswers.count
         {
             for i in 0 ..< question.listAnswers.count{
@@ -101,33 +103,66 @@ class QuestionCell: UITableViewCell {
                 l.text = question.listAnswers[i]
             }
         }
-        
-        btnA.isMultipleSelectionEnabled = true
-        if question.correct_answer == answer
+        let correct = question.correct_answer!
+        if answer == 0
         {
-            let btn = listButtons[answer]
-            btn.isSelected = true
-            btn.indicatorColor = UIColor(successColor)!
-            btn.iconColor = UIColor(successColor)!
-            btn.deselectOtherButtons()
-        }else if answer == 0 {
-            let btn = listButtons[question.correct_answer]
-            btn.isSelected = true
-            btn.indicatorColor = UIColor(successColor)!
-            btn.iconColor = UIColor(successColor)!
-            btn.deselectOtherButtons()
+            for btn in listButtons
+            {
+                btn.isSelected = false;
+                btn.indicatorColor = UIColor(indicatorColor)!
+                btn.iconColor = UIColor(indicatorColor)!
+            }
+            let button = listButtons[correct - 1]
+            button.isSelected = true
+            button.indicatorColor = .blue
+            button.iconColor = .blue
+            button.deselectOtherButtons()
+            
         }else
         {
-            let btnR = listButtons[question.correct_answer]
-            btnR.isSelected = true
-            btnR.indicatorColor = UIColor(successColor)!
-            btnR.iconColor = UIColor(successColor)!
-            
-            let btnW = listButtons[answer]
-            btnW.isSelected = true
-            btnW.indicatorColor = UIColor(failColor)!
-            btnW.iconColor = UIColor(failColor)!
+            if correct == answer
+            {
+                
+                let button = listButtons[correct - 1]
+                button.isSelected = true
+                button.indicatorColor = .blue
+                button.iconColor = .blue
+                button.deselectOtherButtons()
+                for btn in listButtons
+                {
+                    if btn != button
+                    {
+                        btn.isSelected = false;
+                        btn.indicatorColor = .white
+                        btn.iconColor = UIColor(indicatorColor)!
+                    }
+                }
+            }else
+            {
+                let buttonCorrect = listButtons[correct - 1]
+                buttonCorrect.isSelected = true
+                buttonCorrect.indicatorColor = .blue
+                buttonCorrect.iconColor = .blue
+                
+                let buttonAnswer = listButtons[answer - 1]
+                buttonAnswer.isSelected = true
+                buttonAnswer.indicatorColor =  UIColor(indicatorColor)!
+                buttonAnswer.iconColor =  UIColor(indicatorColor)!
+
+                for btn in listButtons
+                {
+                    if btn != buttonCorrect && btn != buttonAnswer
+                    {
+                        btn.isSelected = false;
+                        btn.indicatorColor = .white
+                        btn.iconColor = UIColor(indicatorColor)!
+                    }
+                }
+            }
         }
+        
+        
+        
         
     }
 
@@ -138,6 +173,8 @@ extension QuestionCell : HIRadioButtonDelegate
 {
     func buttonDidTap(sender: HIRadioButton) {
         print("Radio button touchUpInside \(sender.tag)");
+        SoundManager.shared().playSound("Tock.caf")
+   
         delegate?.questionCellDidChooseAnswer(cell: self, answer: sender.tag)
     }
 }

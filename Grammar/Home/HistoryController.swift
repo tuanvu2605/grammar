@@ -86,6 +86,7 @@ extension HistoryController
         let questionController = QuestionsController(nibName: "QuestionsController", bundle: nil)
         questionController.title = "Test Detail"
         questionController.listQuestions = listQuestion
+        questionController.isEnableReviewButton = true
         questionController.listAnswers = listTestDetails.map({ (detail) -> Int in
             return detail.userAnswer;
         })

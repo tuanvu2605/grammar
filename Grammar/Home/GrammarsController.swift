@@ -29,6 +29,11 @@ class GrammarsController: BaseTableViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func btnExerciseDidTap(_ sender: UIButton) {
+        
+        
+    }
+    
     func configueUI()
     {
         // custom back button
@@ -65,6 +70,32 @@ extension GrammarsController
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         super.tableView(tableView, didSelectRowAt: indexPath)
+    }
+}
+
+extension GrammarsController
+{
+    func filterQuestion()->[Question]
+    {
+        var listQuestion = [Question]()
+        for g in grammars
+        {
+            var countQues = 0;
+            for q in g.questions
+            {
+                if q.status == 1
+                {
+                    listQuestion.append(q)
+                    countQues = countQues + 1;
+                    if countQues >= 5
+                    {
+                        break;
+                    }
+                }
+            }
+        }
+        return listQuestion;
+        
     }
 }
 

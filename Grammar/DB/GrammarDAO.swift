@@ -41,6 +41,17 @@ class GrammarDAO: NSObject {
         }
     }
     
+    func updateGrammarStatus(grId : Int , status : Int)
+    {
+        let query  = "UPDATE " +
+            "Grammar " +
+            "SET " +
+            "Status = ? " +
+            "WHERE " +
+        "ID = ?;"
+        let _ = self.db.executeUpdate(query, withArgumentsIn: [grId , status])
+    }
+    
     func loadGrammar(tuples: [(grID : Int , lessonId : Int)]) -> [Grammar]
     {
         var grammars = [Grammar]()

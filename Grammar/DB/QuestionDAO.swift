@@ -43,6 +43,18 @@ class QuestionDAO: NSObject {
         return lisQuestion
     }
     
+    
+    func updateQuestionStatus(quesId : Int , status : Int)
+    {
+        let query  = "UPDATE " +
+            "Question " +
+            "SET " +
+            "status = ? " +
+            "WHERE " +
+        "ID = ?;"
+        let _ = self.db.executeUpdate(query, withArgumentsIn: [quesId , status])
+    }
+    
     func loadQuestions(lessons: [Lesson]) {
         for l in lessons {
             

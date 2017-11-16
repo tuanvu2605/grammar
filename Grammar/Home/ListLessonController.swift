@@ -74,6 +74,7 @@ extension ListLessonController
         super.tableView(tableView, didSelectRowAt: indexPath)
         let lesson = listLession[indexPath.section];
         let grammarController = GrammarsController(nibName: "GrammarsController", bundle: nil)
+        grammarController.title = lesson.title
         grammarController.grammars = lesson.grammars
         self.navigationController?.pushViewController(grammarController, animated: true)
         
