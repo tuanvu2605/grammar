@@ -11,7 +11,7 @@ import MDHTMLLabel
 
 class ContentCell: UITableViewCell {
 
-    @IBOutlet weak var lblContent: MDHTMLLabel!
+    @IBOutlet weak var lblContent: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,7 +19,7 @@ class ContentCell: UITableViewCell {
     
     func display_(grammar : Grammar)
     {
-        lblContent.htmlText = grammar.content;
+        lblContent.setHtml(grammar.content)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

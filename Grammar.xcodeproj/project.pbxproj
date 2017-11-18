@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E045D251FC09D9700FFF6B6 /* UILabel+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E045D241FC09D9700FFF6B6 /* UILabel+HTML.m */; };
+		6ECB15FD1FC09C2D000059F0 /* DLRadioButton+External.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ECB15FC1FC09C2D000059F0 /* DLRadioButton+External.m */; };
 		CC02412F1FB2ECCA0094FEFF /* HIRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02412E1FB2ECCA0094FEFF /* HIRadioButton.swift */; };
 		CC0241321FB2FCAB0094FEFF /* ResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0241301FB2FCAB0094FEFF /* ResultController.swift */; };
 		CC0241331FB2FCAB0094FEFF /* ResultController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0241311FB2FCAB0094FEFF /* ResultController.xib */; };
@@ -62,6 +64,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E045D231FC09D9700FFF6B6 /* UILabel+HTML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+HTML.h"; sourceTree = "<group>"; };
+		6E045D241FC09D9700FFF6B6 /* UILabel+HTML.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+HTML.m"; sourceTree = "<group>"; };
+		6ECB15FB1FC09C2D000059F0 /* DLRadioButton+External.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DLRadioButton+External.h"; sourceTree = "<group>"; };
+		6ECB15FC1FC09C2D000059F0 /* DLRadioButton+External.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DLRadioButton+External.m"; sourceTree = "<group>"; };
 		A4C868F8EDFA9A740CD8E67F /* Pods-Grammar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grammar/Pods-Grammar.debug.xcconfig"; sourceTree = "<group>"; };
 		C9FB9E3C2B2692534F733FC1 /* Pods-Grammar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grammar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grammar/Pods-Grammar.release.xcconfig"; sourceTree = "<group>"; };
 		CC02412E1FB2ECCA0094FEFF /* HIRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIRadioButton.swift; sourceTree = "<group>"; };
@@ -257,6 +263,10 @@
 			children = (
 				CC62AC7D1FBD8D7D003DCDBF /* SoundManager.h */,
 				CC62AC7C1FBD8D7D003DCDBF /* SoundManager.m */,
+				6ECB15FB1FC09C2D000059F0 /* DLRadioButton+External.h */,
+				6ECB15FC1FC09C2D000059F0 /* DLRadioButton+External.m */,
+				6E045D231FC09D9700FFF6B6 /* UILabel+HTML.h */,
+				6E045D241FC09D9700FFF6B6 /* UILabel+HTML.m */,
 				CC02412E1FB2ECCA0094FEFF /* HIRadioButton.swift */,
 				CC62AC7B1FBD8D7B003DCDBF /* Grammar-Bridging-Header.h */,
 			);
@@ -365,7 +375,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4687A793100544F4C437C9D4 /* [CP] Copy Pods Resources */ = {
@@ -412,7 +422,9 @@
 				CCDFB4DD1FB14F9B0031195C /* CheckBoxCell.swift in Sources */,
 				CCDFB4CE1FB069990031195C /* HomeController.swift in Sources */,
 				CC0241321FB2FCAB0094FEFF /* ResultController.swift in Sources */,
+				6E045D251FC09D9700FFF6B6 /* UILabel+HTML.m in Sources */,
 				CC0318261FA71221002AB87D /* TitleCell.swift in Sources */,
+				6ECB15FD1FC09C2D000059F0 /* DLRadioButton+External.m in Sources */,
 				CC17F7A11FB15DA9003A679D /* ContentCell.swift in Sources */,
 				CC62AC791FBD77A9003DCDBF /* StudyHistoryCell.swift in Sources */,
 				CC17F7BB1FB17FF6003A679D /* LessonDAO.swift in Sources */,
@@ -501,7 +513,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -546,7 +558,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -564,7 +576,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XY29E79Z8X;
 				INFOPLIST_FILE = Grammar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = club.iosdevelopers.Grammar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -583,7 +595,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = XY29E79Z8X;
 				INFOPLIST_FILE = Grammar/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = club.iosdevelopers.Grammar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
